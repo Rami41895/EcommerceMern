@@ -9,7 +9,7 @@ const scategorieRouter = require("./routes/scategorie.route");
 dotenv.config();
 app.use(express.json());
 
-// Connexion à la base données
+// Connexion à la base donnéess
 mongoose
   .connect(process.env.DATABASECLOUD, {
     useNewUrlParser: true,
