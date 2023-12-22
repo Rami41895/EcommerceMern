@@ -2,12 +2,16 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const app = express();
+const cors = require("cors");
 const categorieRouter = require("./routes/categorie.route");
 const articleRouter = require("./routes/article.route");
 const scategorieRouter = require("./routes/scategorie.route");
 
 dotenv.config();
 app.use(express.json());
+
+// 5ater elback yesta3mel f port 3001 w frontend 3000 deux port different
+app.use(cors());
 
 // Connexion à la base donnéess
 mongoose
